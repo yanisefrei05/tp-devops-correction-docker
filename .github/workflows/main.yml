@@ -62,4 +62,4 @@ jobs:
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/tp-devops-httpd:latest
           push: ${{ github.ref == 'refs/heads/main' }}
       - name: Analyse de code SonarCloud
-        run: mvn -B verify sonar:sonar -Dsonar.projectKey=yanisefrei05 -Dsonar.organization=yanisefrei05 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }} --file ./simple-api/pom.xml
+        run: mvn -B verify sonar:sonar -Dsonar.projectKey=yanisefrei05_tp-devops-correction-docker -Dsonar.organization=yanisefrei05 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }} --file ./simple-api/pom.xml
