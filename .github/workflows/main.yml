@@ -36,6 +36,9 @@ jobs:
       - name: Build and test with Maven
         run: mvn clean verify --file ./simple-api/pom.xml
 
+      - name: Forcer JAVA_HOME
+        run: echo "JAVA_HOME=$JAVA_HOME"
+
   build-and-push-docker-image:
     needs: test-backend
     runs-on: ubuntu-24.04
