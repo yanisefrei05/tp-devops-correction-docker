@@ -19,6 +19,10 @@
 		<testcontainers.version>1.20.4</testcontainers.version>
 		<validation.version>3.1.0</validation.version>
 	</properties>
+	<properties>
+		<maven.compiler.source>21</maven.compiler.source>
+		<maven.compiler.target>21</maven.compiler.target>
+	</properties>
 
 	<dependencies>
 		<dependency>
