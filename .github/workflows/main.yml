@@ -25,19 +25,10 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '21'
-          cache: maven
-
-      - name: Vérification des versions
-        run: |
-          java -version
-          mvn -v
 
       # 3. Exécuter Maven (build + tests)
       - name: Build and test with Maven
         run: mvn clean verify --file ./simple-api/pom.xml
-
-      - name: Forcer JAVA_HOME
-        run: echo "JAVA_HOME=$JAVA_HOME"
 
       - name: Analyse de code SonarCloud
         run: |
